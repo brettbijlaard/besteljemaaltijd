@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#gridbox{
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 2,5fr 2,5fr;
+    grid-template-areas: 
+    'maincontent sidebar'
+    'footer footer';
+}
+
+#gridbox > div {
+    z-index: 1;
+}
+
+#header {
+    background-color: #3A2618;
+    top: 0;
+    position: sticky; 
+    z-index: 2;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#nav{
+    text-align: right;
+    margin-top: 0;
+    display: inline-block;
+    margin-left: 700px;
+}
+
+
+#nav > ul > li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 25px;
+    position: relative;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+
+#nav > ul > li:hover{
+    background-color: #9A8873;
+    transform: scale(1.10);
+    transition: 0.3s;
+}
+
+ul#sub {
+    position: absolute;
+    background-color: #EBE8E0;
+    list-style-type: none;
+    width:125px;
+    padding-left: 0px;
+    margin-left: -25px;
+    padding-top: 5px;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: 0.3s;
+    border-radius: 25px;
+    text-align: left;
+}
+
+ul#sub li {
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#nav li:hover #sub{
+    opacity: 1;
+}
+
+ul#sub li:hover{
+    color: white;
+    background-color: #3A2618;
+    border-radius: 25px;
+}
+
+#maincontent {
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: 1em;
+    grid-area: maincontent;
+    height: 700px;
+    background-color: #9A8873;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+#sidebar {
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 1em;
+    grid-area: sidebar;
+    text-align: center;
+    background-color: blanchedalmond;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+} 
+
+#footer {
+    background-color: #3A2618;
+    grid-area: footer;
+    bottom:0;
+    width: 100%;
+}
+
+#informatie{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#informatie:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#social{
+    width: 5%;
+}
+
+#logo{
+    width: 15%;
+}
+
+#tekst{
+    text-align: center;
+}
+
+
